@@ -34,11 +34,6 @@ add_action( 'plugins_loaded', function() {
     return;
   }
 
-  // only load when WPML is activated
-  if( ! defined( 'ICL_SITEPRESS_VERSION' ) ) {
-    return;
-  }
-
   // load functions & hooks
   require __DIR__ . '/includes/functions.php';
   require __DIR__ . '/includes/hooks.php';

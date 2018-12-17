@@ -2,9 +2,8 @@
 
 
 function mc4wp_wpml_settings_page() {
-  global $sitepress;
   $opts = mc4wp_wpml_get_options();
-  $languages =  $sitepress->get_active_languages();
+  $languages = apply_filters( 'wpml_active_languages', array() );
   $mailchimp = new MC4WP_MailChimp();
   $mailchimp_lists = $mailchimp->get_lists();
 
